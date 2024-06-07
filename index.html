@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>UPLCC1</title>
+  </head>
+  <body>	
+<div id="zw" class="zw" onclick="dk();"></div>
+	<div id="xta" class="xta">
+<div id="rja" class="rja" onclick="if(rjasz == 0){rjadk();}">
+设置
+<div id="szadiv" class="szadiv" onclick="szadk();"><p id="sza" class="sza">小白条位置</p></div>
+<div id="szbdiv" class="szbdiv" onclick="szbdk();"><p id="szb" class="sza">关于</p></div>
+</div>
+<div id="xht" class="xht" onclick="if(xhtgba == 1){xhtgb();}"></div>
+<div id="szadkym" class="szadkym">
+<h1 id="szagb" class="szagb" onclick="szagbo();">&times<h1>
+<input type="number" id="xhtpy" class="xhtpy" oninput="xhtxspy();" placeholder="取值范围:0-50，默认:1"/>
+</div>
+<div id="szbdkym" class="szbdkym">
+<h1 id="szbgb" class="szbgb" onclick="szbgb();" style="margin-left:10px;">‹</h1>
+<div id="xtbba" class="xtbba" onclick="alert('已经是最新版本');"><br><h1 id="xtbbb" class="xtbbb">UPLCC<span style="color:#00baff;">OS</span></h1><p style="color:gray;margin-left:20px;">1.0.1.0.HTML</p></div>
+<div id="xtbbb" class="xtbbb"><h3>HTML5</h3><sup>HTML版本</sup><br><input type="text" id="inputsba" class="inputsba" placeholder="请输入"/><br><sub>设备型号</sub><br><input type="text" id="inputsba" class="inputsba" placeholder="请输入"/><br><sub>处理器</sub></div>
+</div>
+  </body>
+<style>
+body{
+background-color:black;
+margin:0;
+padding:0;
+}
+.xta{
+width:0%;
+height:0%;
+}
+.zw{
+width:40px;
+height:40px;
+background-color:black;
+border-radius:50px;
+border:5px solid white;
+position:absolute;
+left:0%;
+right:0%;
+bottom:20%;
+margin:0 auto;
+}
+.rja{
+width:70px;
+height:70px;
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+border-radius:10px;
+font-size:20px;
+}
+@keyframes rjadha{
+0%{
+width:70px;
+height:70px;
+}
+100%{
+width:90px;
+height:130px;
+border-radius:20px;
+font-size:35px;
+}
+}
+@keyframes rjadhb{
+0%{
+width:90px;
+height:130px;
+border-radius:20px;
+font-size:35px;
+}
+100%{
+width:100%;
+height:100%;
+border-radius:30px;
+font-size:50px;
+}
+}
+.xht{
+width:130px;
+height:5px;
+background-color:gray;
+border-radius:50px;
+position:absolute;
+bottom:1%;
+left:0;
+right:0;
+margin:0 auto;
+display:none;
+}
+@keyframes rjadhd{
+0%{
+width:90px;
+height:130px;
+border-radius:20px;
+font-size:35px;
+}
+100%{
+width:70px;
+height:70px;
+}
+}
+@keyframes rjadhc{
+0%{
+width:100%;
+height:100%;
+border-radius:30px;
+font-size:50px;
+}
+100%{
+width:90px;
+height:130px;
+border-radius:20px;
+font-size:35px;
+}
+}
+.sza{
+font-size:20px;
+}
+.szadiv{
+border-radius:10px;
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+width:96%;
+height:60px;
+margin-left:2%;
+display:none;
+}
+.szadkym{
+position:absolute;
+top:0;
+display:none;
+background-color:white;
+width:100%;
+height:50%;
+}
+.szbdiv{
+border-radius:10px;
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+width:96%;
+height:60px;
+margin-left:2%;
+display:none;
+margin-top:2px;
+}
+.szbdkym{
+position:absolute;
+top:0;
+display:none;
+background-color:white;
+width:100%;
+height:50%;
+}
+.xtbba{
+border-radius:20px;
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+width:96%;
+height:170px;
+margin-left:2%;
+}
+.xtbbb{
+margin-left:20px;
+}
+.inputsba{
+border:0px solid black;
+font-size:20px;
+font-weight:500;
+}
+</style>
+<script>
+rjasz = 0;
+xhtgba = 0;
+function dk(){
+zw.style.backgroundColor="white";
+setTimeout(function (){
+xta.style.width="100%";
+xta.style.height="210.5vw";
+xta.style.backgroundColor="white";
+xht.style.display="block";
+zw.style.display="none";
+},50);
+}
+function rjadk(){
+rja.style.animationName="rjadha";
+rja.style.animationDuration="0.3s";
+rjasz = 1;
+xhtgba = 1;
+setTimeout(function (){
+rja.style.animationName="rjadhb";
+rja.style.animationDuration="0.6s";
+rja.style.width="100%";
+rja.style.height="100%";
+rja.style.fontSize="50px";
+rja.style.borderRadius="0px";
+szadiv.style.display="block";
+szbdiv.style.display="block";
+},100);
+}
+function xhtgb(){
+szbdiv.style.display="none";
+szadkym.style.display="none";
+szbdkym.style.display="none";
+rja.style.animationName="rjadhc";
+rja.style.animationDuration="0.6s";
+rjasz = 1;
+szadiv.style.display="none";
+setTimeout(function (){
+rja.style.animationName="rjadhd";
+rja.style.animationDuration="0.3s";
+rja.style.width="70px";
+rja.style.height="70px";
+rja.style.borderRadius="10px";
+rja.style.fontSize="20px";
+rjasz = 0;
+xhtgba = 0;
+szbdiv.style.display="none";
+szadkym.style.display="none";
+szbdkym.style.display="none";
+szadiv.style.display="none";
+},470);
+}
+function xhtxspy(){
+xhtpysz = xhtpy.value;
+xhtpyffsz = xhtpysz.substr(0,1);
+if(xhtpysz => 0,xhtpysz <= 50){
+xht.style.bottom=xhtpysz + "%";
+}else{
+alert("数值不合理，修改失败");
+document.getElementById("xhtpy").value="1";
+xht.style.bottom="1%";
+}
+if(xhtpyffsz == "-"){
+alert("含有被开发者禁止的符号，修改失败");
+document.getElementById("xhtpy").value="1";
+xht.style.bottom="1%";
+}
+}
+function szagbo(){
+szadkym.style.display="none";
+}
+function szadk(){
+szadkym.style.display="block";
+}
+function szbgb(){
+szbdkym.style.display="none";
+}
+function szbdk(){
+szbdkym.style.display="block";
+}
+</script>
+  </html>
