@@ -11,8 +11,9 @@
 设置
 <div id="szadiv" class="szadiv" onclick="szadk();"><p id="sza" class="sza">小白条位置</p></div>
 <div id="szbdiv" class="szbdiv" onclick="szbdk();"><p id="szb" class="sza">关于</p></div>
+<div id="szcdiv" class="szcdiv" onclick="szcdk();"><p id="szc" class="sza">触控优化</p></div>
 </div>
-<div id="xht" class="xht" onclick="if(xhtgba == 1){xhtgb();}"></div>
+<div id="xhtbk" class="xhtbk" onclick="if(xhtgba == 1){xhtgb();}"></div><div id="xht" class="xht" onclick="if(xhtgba == 1){xhtgb();}"></div>
 <div id="szadkym" class="szadkym">
 <h1 id="szagb" class="szagb" onclick="szagbo();">&times<h1>
 <input type="number" id="xhtpy" class="xhtpy" oninput="xhtxspy();" placeholder="取值范围:0-50，默认:1"/>
@@ -90,6 +91,18 @@ right:0;
 margin:0 auto;
 display:none;
 }
+.xhtbk{
+width:130px;
+height:5px;
+background-color:white;
+border-radius:50px;
+position:absolute;
+bottom:1%;
+left:0;
+right:0;
+margin:0 auto;
+display:none;
+}
 @keyframes rjadhd{
 0%{
 width:90px;
@@ -144,6 +157,15 @@ margin-left:2%;
 display:none;
 margin-top:2px;
 }
+.szcdiv{
+border-radius:10px;
+box-shadow:0px 5px 10px 15px rgba(0,0,0,0.1);
+width:96%;
+height:60px;
+margin-left:2%;
+display:none;
+margin-top:2px;
+}
 .szbdkym{
 position:absolute;
 top:0;
@@ -169,6 +191,7 @@ font-weight:500;
 }
 </style>
 <script>
+ckyh = 0;
 rjasz = 0;
 xhtgba = 0;
 function dk(){
@@ -178,6 +201,7 @@ xta.style.width="100%";
 xta.style.height="210.5vw";
 xta.style.backgroundColor="white";
 xht.style.display="block";
+xhtbk.style.display="block";
 zw.style.display="none";
 },50);
 }
@@ -195,10 +219,12 @@ rja.style.fontSize="50px";
 rja.style.borderRadius="0px";
 szadiv.style.display="block";
 szbdiv.style.display="block";
+szcdiv.style.display="block";
 },100);
 }
 function xhtgb(){
 szbdiv.style.display="none";
+szcdiv.style.display="none";
 szadkym.style.display="none";
 szbdkym.style.display="none";
 rja.style.animationName="rjadhc";
@@ -218,10 +244,11 @@ szbdiv.style.display="none";
 szadkym.style.display="none";
 szbdkym.style.display="none";
 szadiv.style.display="none";
+szcdiv.style.display="none";
 },470);
 }
 function xhtxspy(){
-xhtpysz = xhtpy.value;
+xtpysz = xhtpy.value;
 xhtpyffsz = xhtpysz.substr(0,1);
 if(xhtpysz => 0,xhtpysz <= 50){
 xht.style.bottom=xhtpysz + "%";
@@ -248,5 +275,16 @@ szbdkym.style.display="none";
 function szbdk(){
 szbdkym.style.display="block";
 }
+function szcdk(){
+if(ckyh == 0){
+alert("触控优化 已打开");
+ckyh = 1;
+xhtbk.style.height="20px";
+}else{
+alert("触控优化 已关闭");
+ckyh = 0;
+xhtbk.style.height="5px";
+}
+}
 </script>
-  </html>
+</html>
