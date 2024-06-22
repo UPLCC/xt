@@ -20,7 +20,7 @@
 </div>
 <div id="szbdkym" class="szbdkym">
 <h1 id="szbgb" class="szbgb" onclick="szbgb();" style="margin-left:10px;">‹</h1>
-<div id="xtbba" class="xtbba" onclick="alert('已经是最新版本');"><br><h1 id="xtbbb" class="xtbbb">UPLCC<span style="color:#00baff;">OS</span></h1><p style="color:gray;margin-left:20px;">1.0.1.0.HTML</p></div>
+<div id="xtbba" class="xtbba" onclick="if(xtbb == 1){setTimeout(function(){alert('发现新版本!\n版本号: 1.0.2.0.DEV\n更新内容:\n修复 快速打开关闭设置时选项未关闭\n新增 触控优化\n注意 该版本为内测版本，如遇问题请联系开发者');xtbb = 2;xtbbgx();},500);}else{alert('已经是最新版本');}"><br><h1 id="xtbbb" class="xtbbb">UPLCC<span style="color:#00baff;">OS</span></h1><p style="color:gray;margin-left:20px;" id="xtbbh">1.0.1.0.HTML</p></div>
 <div id="xtbbb" class="xtbbb"><h3>HTML5</h3><sup>HTML版本</sup><br><input type="text" id="inputsba" class="inputsba" placeholder="请输入"/><br><sub>设备型号</sub><br><input type="text" id="inputsba" class="inputsba" placeholder="请输入"/><br><sub>处理器</sub></div>
 </div>
   </body>
@@ -194,6 +194,7 @@ font-weight:500;
 ckyh = 0;
 rjasz = 0;
 xhtgba = 0;
+xtbb = 1;
 function dk(){
 zw.style.backgroundColor="white";
 setTimeout(function (){
@@ -219,7 +220,9 @@ rja.style.fontSize="50px";
 rja.style.borderRadius="0px";
 szadiv.style.display="block";
 szbdiv.style.display="block";
+if(xtbb == 2){
 szcdiv.style.display="block";
+}
 },100);
 }
 function xhtgb(){
@@ -248,7 +251,7 @@ szcdiv.style.display="none";
 },470);
 }
 function xhtxspy(){
-xtpysz = xhtpy.value;
+xhtpysz = xhtpy.value;
 xhtpyffsz = xhtpysz.substr(0,1);
 if(xhtpysz => 0,xhtpysz <= 50){
 xht.style.bottom=xhtpysz + "%";
@@ -285,6 +288,9 @@ alert("触控优化 已关闭");
 ckyh = 0;
 xhtbk.style.height="5px";
 }
+}
+function xtbbgx(){
+document.getElementById("xtbbh").innerHTML="1.0.2.0.DEV";
 }
 </script>
 </html>
